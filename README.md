@@ -43,6 +43,7 @@ React JS Advanced Folder Structure
     |	  └── Tooltip
     |           ├── index.jsx
     |           └── tooltip.module.css
+    |     └── index.js
     ├──  db
     |     ├── productsData.js
     |     └── userData.js
@@ -57,8 +58,9 @@ React JS Advanced Folder Structure
     |     |     ├── index.jsx
     |     |     └── breadcrumbs.module.css
     |     └── Footer.jsx
-    |     |     ├── index.jsx
-    |     |     └── footer.module.css
+    |           ├── index.jsx
+    |           └── footer.module.css
+    |     └── index.js
     ├── pages
     |     ├── Home
     |     |     ├── index.jsx
@@ -70,8 +72,9 @@ React JS Advanced Folder Structure
     |     |     ├── index.jsx
     |     |     └── signup.module.css
     |     └── About
-    |     |     ├── index.jsx
-    |     |     └── about.module.css
+    |           ├── index.jsx
+    |           └── about.module.css
+    |     └── index.js
     ├── Routers
     |     └── Routers.js
     ├── store
