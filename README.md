@@ -1,4 +1,4 @@
-# React JS Mid-Level Folder Structure
+# React JS Advance-Level Folder Structure
 
 How to run the project
 ```javascript
@@ -29,44 +29,67 @@ React JS Advanced Folder Structure
     |     ├── audios
     |     ├── icons
     |     ├── images
-    |     ├── videos
-    |     └── styles
+    |     └── videos
     ├── components
-    |     ├── Btn
-    |	  ├── DropDownBtn
-    |	  ├── inputs
-    |	  ├── Modal
-    |	  ├── Popups
-    |	  ├── Toast
-    |	  ├── Tooltip
-    |	  ├── Text/Heading/Title
-    |	  ├── Skeleton
-    |	  └── Spiner/Loader
-    ├── constants
-    |     ├── Strapi.js
-    |     └── Firebase.js
-    ├── db
-    |     └── productsData.js
+    |     ├── Button
+    |     |     ├── index.jsx
+    |     |     └── button.module.css
+    |	    ├── inputs
+    |     |     ├── index.jsx
+    |     |     └── inputs.module.css
+    |	    ├── Modal
+    |     |     ├── index.jsx
+    |     |     └── modal.module.css
+    |	    └── Tooltip
+    |           ├── index.jsx
+    |           └── tooltip.module.css
+    ├──  db
+    |     ├── productsData.js
     |     └── userData.js
-    ├── handler
-    |     └── apiHandler.js
     ├── layout
-    |     ├── Header.jsx
+    |     ├── Header
+    |     |     ├── index.jsx
+    |     |     └── header.module.css
     |     ├── Navbar.jsx
+    |     |     ├── index.jsx
+    |     |     └── navbar.module.css
     |     ├── Breadcrumbs.jsx
+    |     |     ├── index.jsx
+    |     |     └── breadcrumbs.module.css
     |     └── Footer.jsx
+    |     |     ├── index.jsx
+    |     |     └── footer.module.css
     ├── pages
-    |     ├── Home.js
-    |     ├── Login.js
-    |     ├── Signup.js
-    |     ├── Shop.js
-    |     ├── Payment.js
-    |     └── About.js
-    ├── routers
+    |     ├── Home
+    |     |     ├── index.jsx
+    |     |     └── home.module.css
+    |     ├── Login
+    |     |     ├── index.jsx
+    |     |     └── login.module.css
+    |     ├── Signup
+    |     |     ├── index.jsx
+    |     |     └── signup.module.css
+    |     └── About
+    |     |     ├── index.jsx
+    |     |     └── about.module.css
+    ├── Routers
     |     └── Routers.js
+    ├── store
+    |     ├── action.js  
+    |     ├── reducers.js  
+    |     └── store.js
     ├── services
     |     ├── api.js          // API request functions
     |     └── dataUtils.js    // Data manipulation functions
+    ├── utils
+    |     ├── constants
+    |     |     ├── Strapi.js
+    |     |     └── Firebase.js
+    |     ├── helpers
+    |     |     ├── arrays.js
+    |     |     └── helpers.js
+    |     └── hooks  
+    |           └── useIsMobile.js  
     ├── .env
     ├── app.js
     ├── index.css
@@ -83,12 +106,16 @@ React JS Advanced Folder Structure
 - `Public`
 - `Assests`
 - `Components`
-- `Constants`
 - `db`
 - `layout`
 - `Pages`
 - `Routes`
 - `services`
+- `store`
+- `utils`
+  - `Constants`
+  - `helpers`
+  - `hooks`
 - `.env.example` / `.env.development`
 - `.eslintrc.cjs`
 - `.prettierrc.cjs`
@@ -174,6 +201,42 @@ import axios from 'axios';
 
 export function fetchUserData(userId) {
   return axios.get(`/api/users/${userId}`);
+}
+```
+
+### Store
+"store" folder in a React application typically refers to a directory where you manage your application's state using state management libraries like 
+- Redux 
+- Redux Toolkit
+- Zustand
+- Context Api
+- Mobx
+
+```javascript
+|-- store/
+|   |-- actions.js        // Redux action creators
+|   |-- reducers.js       // Redux reducers
+|   |-- store.js          // Redux store configuration
+```
+
+### Utils
+
+**`Utils`** folder is a common convention in many software projects, including React applications, for storing utility functions and helper modules that provide general-purpose functionality across different parts of the application. 
+- constants
+- helpers
+- hooks
+
+Example: 
+```javascript
+// utils/stringUtils.js
+export function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// utils/dateUtils.js
+export function formatDate(date) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(date).toLocaleDateString(undefined, options);
 }
 ```
 
