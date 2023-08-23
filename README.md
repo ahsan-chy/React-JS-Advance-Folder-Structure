@@ -34,13 +34,13 @@ React JS Advanced Folder Structure
     |     ├── Button
     |     |     ├── index.jsx
     |     |     └── button.module.css
-    |	    ├── inputs
+    |	  ├── inputs
     |     |     ├── index.jsx
     |     |     └── inputs.module.css
-    |	    ├── Modal
+    |	  ├── Modal
     |     |     ├── index.jsx
     |     |     └── modal.module.css
-    |	    └── Tooltip
+    |	  └── Tooltip
     |           ├── index.jsx
     |           └── tooltip.module.css
     ├──  db
