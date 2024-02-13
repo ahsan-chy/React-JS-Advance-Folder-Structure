@@ -343,3 +343,23 @@ export default defineConfig({
   plugins: [react()],
 })
 ```
+
+**2nd Method**
+
+```javascript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { resolve } from 'path';
+
+const alias = {
+  // eslint-disable-next-line no-undef
+  '@': resolve(__dirname, './src'),
+};
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias,
+  },
+})
+```
